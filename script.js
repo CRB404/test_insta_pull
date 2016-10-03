@@ -4,9 +4,11 @@ function loadJSONcall() {
         function(data) {
           var instaData = data;
           console.log(instaData);
-          var sliceData = instaData.slice(0);
           console.log("________________________");
-          console.log(instaData);
+          var workData = data.data;
+          console.log(workData);
+          console.log("________________________");
+
         }
     );
 
