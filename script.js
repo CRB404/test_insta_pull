@@ -1,20 +1,8 @@
-function loadData(){
-  jQuery.ajax( {
-      url: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=1377128560.1677ed0.3cbc51058d3448be81bf01626ad230e9',
-      type: 'GET',
-      data: { link: '' },
-      success: function( response ) {
-        console.log(success);
-          // response
-      }
-  } );
-}
-
 function loadJSONcall() {
   $.getJSON(
         'https://api.instagram.com/v1/users/self/media/recent/?access_token=1377128560.1677ed0.3cbc51058d3448be81bf01626ad230e9&callback=?',
         function(data) {
-            console.log(data);
+            console.log(data[0]);
         }
     );
 
