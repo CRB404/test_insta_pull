@@ -5,8 +5,8 @@ function loadJSONcall() {
           var instaData = data;
           console.log(instaData);
           console.log("________________________");
-          var workData = data.data;
-          console.log(workData);
+          var imgPath = data.data[0];
+          console.log(imgPath);
           console.log("________________________");
 
         }
