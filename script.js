@@ -8,7 +8,7 @@ function loadJSONcall() {
           var lastImg = data.data.slice(0);
           console.log(lastImg);
           console.log("________________________");
-          var imgPath = lastImg.images;
+          var imgPath = lastImg.images.slice(6);
           console.log(imgPath);
           console.log("________________________");
         }
