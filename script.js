@@ -10,3 +10,13 @@ function loadData(){
       }
   } );
 }
+
+function loadJSONcall() {
+  $.getJSON(
+        'https://api.instagram.com/v1/users/25025320/media/recent/?client_id=f574fddc748b46e4ba3db72787691687&callback=?',
+        function(data) {
+            console.log(data);
+        }
+    );
+
+}
