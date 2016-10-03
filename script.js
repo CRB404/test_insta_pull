@@ -4,13 +4,13 @@ function loadJSONcall() {
         function(data) {
           var instaData = data;
           console.log(instaData);
-          console.log("________________________");
+          console.log("instaData ________________________");
           var lastImg = data.data.slice(0);
           console.log(lastImg);
-          console.log("________________________");
-          var imgPath = lastImg.slice(6);
+          console.log("lastImg ________________________");
+          var imgPath = lastImg.slice(0);
           console.log(imgPath);
-          console.log("________________________");
+          console.log("imgPath ________________________");
         }
     );
 
