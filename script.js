@@ -8,9 +8,17 @@ function loadJSONcall() {
           var lastImg = data.data.slice(0);
           console.log(lastImg);
           console.log("lastImg ________________________");
-          var imgPath = lastImg.slice(0);
-          console.log(imgPath);
-          console.log("imgPath ________________________");
+
+
+          for (var i=0; i<lastImg.length; i++)
+            for (var name in lastImg[i]) {
+                console.log("0: "+name);
+                console.log("images: "+lastImg[i][name].images);
+                console.log("Target: "+lastImg[i][name].caption);
+            }
+
+
+
         }
     );
 
