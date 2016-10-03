@@ -2,24 +2,25 @@ function loadJSONcall() {
   $.getJSON(
         'https://api.instagram.com/v1/users/self/media/recent/?access_token=1377128560.1677ed0.3cbc51058d3448be81bf01626ad230e9&callback=?',
         function(data) {
+          // Pull data out of API
           var instaData = data;
-          console.log(instaData);
-          console.log("instaData ________________________");
+          // Open up array
           var Images = data.data.slice(0);
-          console.log(Images);
-          console.log("lastImg ________________________");
+          // Set path as global variable, set to nothing
+          var imagePath = null;
 
-
+          // Find image url in JSON array
           for (var i=0; i<6; i++)
             for (var name in Images[i]) {
-                console.log("parent: "+name);
-                console.log("child: "+lastImg[i][name]);
-
+                if(name == 'images')
+                  {
+                    var imagePath = Images[i][name];
+                    var image =imagePath.standard_resolution.url;
+                    console.log(image);
+                    document.getElementById("lastPhoto").src = image;
+                    return imagePath; //<--- did not stop the loop!
+                  }
             }
-
-
-
         }
     );
-
 }
