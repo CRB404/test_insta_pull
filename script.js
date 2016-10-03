@@ -13,8 +13,8 @@ function loadJSONcall() {
           for (var i=0; i<lastImg.length; i++)
             for (var name in lastImg[i]) {
                 console.log("0: "+name);
-                console.log("images: "+lastImg[i][name].images);
-                console.log("Target: "+lastImg[i][name].caption);
+                console.log("1: "+lastImg[i][name]);
+                console.log("2: "+lastImg[i][name]);
             }
 
 
