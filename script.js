@@ -5,10 +5,12 @@ function loadJSONcall() {
           var instaData = data;
           console.log(instaData);
           console.log("________________________");
-          var imgPath = data.data.slice(0);
+          var lastImg = data.data.slice(0);
+          console.log(lastImg);
+          console.log("________________________");
+          var imgPath = lastImg.images.standard_resolution.url;
           console.log(imgPath);
           console.log("________________________");
-
         }
     );
 
